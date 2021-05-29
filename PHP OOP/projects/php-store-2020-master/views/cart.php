@@ -70,7 +70,7 @@
         </div>
     </div>
 </div>
-<script>
+<!-- <script>
   let amount = document.querySelector('#amount').dataset.amount;
   let finalAmount = Math.floor(amount / 9.86);
   paypal.Buttons({
@@ -94,4 +94,4 @@
     }
   }).render('#paypal-button-container');
   //This function displays Smart Payment Buttons on your web page.
-</script>
+</script> -->

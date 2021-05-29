@@ -7,7 +7,7 @@ $home = new HomeController();
 $pages = [
         'home','cart','dashboard','updateProduct','deleteProduct',
         'addProduct','emptycart','show','cancelcart','register',
-        'login','checkout','logout','products','orders','addOrder'
+        'login','checkout','logout','products','orders','addOrder','categories','addCategory','updateCategory','deleteCategory'
     ];
 
 if(isset($_GET['page'])){
@@ -15,7 +15,8 @@ if(isset($_GET['page'])){
         $page = $_GET['page'];
         if($page === "dashboard" || $page === "deleteProduct"
             || $page === "addProduct"  || $page === "updateProduct" || $page === "products" ||
-            $page === "orders"){
+            $page === "orders" || $page === "categories" || $page === "addCategory" || $page === "updateCategory"
+            || $page === "deleteCategory"){
                 if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                     $admin = new AdminController();
                     $admin->index($page);

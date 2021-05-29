@@ -20,20 +20,29 @@
         </a>
       </li>
       <li class="nav-item dropdown">
+      <?php if(isset($_SESSION["logged"]) && $_SESSION["logged"] === true):?>
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Compte
+        <?php echo $_SESSION["fullname"];?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <?php if(isset($_SESSION["logged"]) && $_SESSION["logged"] === true):?>
-          <a class="dropdown-item" href="#"><?php echo $_SESSION["fullname"];?></a>
-          <a class="dropdown-item" href="<?php echo BASE_URL;?>logout">Déconnexion</a>
+       
+          
           <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"] == true):?>
-           <a class="dropdown-item" href="<?php echo BASE_URL;?>dashboard">Admin <span class="sr-only">(current)</span></a>
+           <a class="dropdown-item" href="<?php echo BASE_URL;?>dashboard">Dashboard <span class="sr-only">(current)</span></a>
           <?php endif;?> 
-        <?php else:?>  
+          <a class="dropdown-item" href="<?php echo BASE_URL;?>logout">Déconnexion</a>
+          </div>
+          
+        <?php else:?> 
+  
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Compte
+        </a> 
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="<?php echo BASE_URL;?>register">Inscription</a>
           <a class="dropdown-item" href="<?php echo BASE_URL;?>login">Connexion</a>
         </div>
+       
         <?php endif;?> 
       </li>
     </ul>

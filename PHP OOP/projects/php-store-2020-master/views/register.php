@@ -24,15 +24,15 @@
                             name="fullname" required autocomplete="off" placeholder="Nom & Prénom" id="">
                         </div>
                         <div class="form-group">
-                            <input type="text" autocomplete="off" class="form-control" name="username" 
+                            <input type="text" required autocomplete="off" class="form-control" name="username" 
                             placeholder="Pseudo" id="">
                         </div>
                         <div class="form-group">
-                            <input type="email" autocomplete="off" class="form-control" name="email" 
+                            <input type="email" required autocomplete="off" class="form-control" name="email" 
                             placeholder="Email" id="">
                         </div>
                         <div class="form-group">
-                            <input type="password" autocomplete="off" class="form-control" name="password" 
+                            <input type="password" required autocomplete="off" class="form-control" name="password" 
                             placeholder="Mot de passe" id="">
                         </div>
                         <div class="form-group">

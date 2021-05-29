@@ -25,7 +25,7 @@
                             <form id="form" method="post" action="<?php echo BASE_URL;?>show">
                                 <input type="hidden" name="product_id" id="product_id">
                             </form>
-                            <h3 onclick="submitForm(<?php echo $product["product_id"];?>)" class="card-title">
+                            <h3 onclick="submitForm(<?php echo $product['product_id'];?>)" class="card-title">
                                 <?php
                                     echo $product['product_title'];
                                 ?>  
@@ -54,6 +54,7 @@
                                     ?>dh
                                 </strike>
                             </span>
+                            <button type="button" class="btn btn-success">Success</button>
                         </div>
                     </div> 
                 </div>
