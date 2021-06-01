@@ -5,7 +5,7 @@ class Product{
         $stmt = DB::connect()->prepare('SELECT * FROM products');
         $stmt->execute();
         return $stmt->fetchAll();
-        $stmt->close();
+        // $stmt->close();
         $stmt =null;
     }
     static public function getProductByCat($data){
@@ -14,7 +14,7 @@ class Product{
             $stmt = DB::connect()->prepare('SELECT * FROM products WHERE product_category_id = :id');
             $stmt->execute(array(":id" => $id));
             return $stmt->fetchAll();
-            $stmt->close();
+            // $stmt->close();
             $stmt =null;
         }catch(PDOException $ex){
             echo "erreur " .$ex->getMessage();
@@ -27,7 +27,7 @@ class Product{
             $stmt->execute(array(":id" => $id));
             $product = $stmt->fetch(PDO::FETCH_OBJ);
             return $product;
-            $stmt->close();
+            // $stmt->close();
             $stmt =null;
         }catch(PDOException $ex){
             echo "erreur " .$ex->getMessage();
@@ -52,7 +52,7 @@ class Product{
         }else{
             return 'error';
         }
-        $stmt->close();
+        // $stmt->close();
         $stmt = null;
     }
     static public function editProduct($data){
@@ -81,7 +81,7 @@ class Product{
         }else{
             return 'error';
         }
-        $stmt->close();
+        // $stmt->close();
         $stmt = null;
     }
     static public function deleteProduct($data){
@@ -95,7 +95,7 @@ class Product{
             }else{
                 return 'error';
             }
-            $stmt->close();
+            // $stmt->close();
             $stmt =null;
         }catch(PDOException $ex){
             echo "erreur " .$ex->getMessage();
